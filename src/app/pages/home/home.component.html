@@ -1,1 +1,30 @@
 <p>home works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Codigo</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Precio de compra</th>
+        <th scope="col">Precio de venta</th>
+        <th scope="col">Ganancia</th>
+        <th scope="col">Existencia</th>
+        <th scope="col">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of lista">
+        <th scope="row">{{items.codigo}}</th>
+        <td>{{items.codigo}}</td>
+        <td>{{items.descripcion}}</td>
+        <td>{{items.compra}}</td>
+        <td>{{items.venta}}</td>
+        <td>{{items.ganancia}}</td>
+        <td>{{items.existencia}}</td>
+        <td><button type="button" class="btn btn-warning" [routerLink]="['/producto']">Editar</button></td>
+      </tr>
+    </tbody>
+</table>
+<div class="bg-warning my-7">
+    <router-outlet></router-outlet>
+</div>
